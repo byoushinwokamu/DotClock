@@ -26,6 +26,12 @@ void moveright(uint8_t matc, matrix *matv) {
   }
 }
 
+void moverightn(uint8_t matc, matrix *matv, uint8_t amount) {
+  for (amount; amount > 0; amount--)
+    moveright(matc, matv);
+  moveright(matc, matv);
+}
+
 void moveright8(uint8_t matc, matrix *matv) {
   int8_t r, c, m;
   for (m = matc - 1; m > 0; m--) {
@@ -36,4 +42,36 @@ void moveright8(uint8_t matc, matrix *matv) {
     }
   }
   *matv = 0;
+}
+
+matrix num_proto[] = {
+    0x40A0A0A0A0A0A040, // 0
+    0x40C04040404040E0, // 1
+    0x40A0A020408080E0, // 2
+    0x40A0204020A0A040, // 3
+    0xA0A0A0A0F0202020, // 4
+    0xE08080C0202020C0, // 5
+    0x40A08040A0A0A040, // 6
+    0xE0A0A02040404040, // 7
+    0x40A0A040A0A0A040, // 8
+    0x40A0A0A04020A040  // 9
+};
+
+void drawchar(matrix *matv, char ch) {
+  matrix m;
+
+  if (ch >= '0' && ch <= '9')
+    m = num_proto[ch - '0'];
+  else {
+    switch (ch) {
+    case ':':
+      m = 0xC0C00000C0C000;
+      break;
+
+    default:
+      m = 0;
+    }
+  }
+
+  *matv |= m;
 }
