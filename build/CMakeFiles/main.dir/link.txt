@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/main.dir/main.c.o CMakeFiles/main.dir/src/matrix.c.o CMakeFiles/main.dir/src/graphic.c.o CMakeFiles/main.dir/src/print_dot.c.o -o main 

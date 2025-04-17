@@ -1,0 +1,3 @@
+/home/saber/dotclock/build/CMakeFiles/main.dir
+/home/saber/dotclock/build/CMakeFiles/edit_cache.dir
+/home/saber/dotclock/build/CMakeFiles/rebuild_cache.dir
