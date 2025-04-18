@@ -3,14 +3,14 @@
 
 #include <stdint.h>
 
-typedef unsigned long long matrix;
+typedef unsigned long long matrix_t;
 
-uint8_t bitcheck(const matrix *mat, uint8_t row, uint8_t col);
-void bitset(matrix *mat, uint8_t row, uint8_t col);
-void bitclear(matrix *mat, uint8_t row, uint8_t col);
-void bitcopy(const matrix *mats, uint8_t rows, uint8_t cols, matrix *matd,
+uint8_t bitcheck(const matrix_t *mat, uint8_t row, uint8_t col);
+void bitset(matrix_t *mat, uint8_t row, uint8_t col);
+void bitclear(matrix_t *mat, uint8_t row, uint8_t col);
+void bitcopy(const matrix_t *mats, uint8_t rows, uint8_t cols, matrix_t *matd,
              uint8_t rowd, uint8_t cold);
-void transpose(matrix *mat);
-void rotate_cw(matrix *mat);
+void transpose(matrix_t *mat);
+void rotate_cw(matrix_t *mat);
 
 #endif

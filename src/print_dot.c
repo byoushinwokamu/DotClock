@@ -1,6 +1,6 @@
 #include "print_dot.h"
 
-void printdot(uint8_t matc, const matrix *matv) {
+void printdot(uint8_t matc, const matrix_t *matv) {
   int8_t r, c, m;
   if (matc == 0)
     return;

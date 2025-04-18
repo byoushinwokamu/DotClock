@@ -4,6 +4,6 @@
 #include "matrix.h"
 #include <stdio.h>
 
-void printdot(uint8_t matc, const matrix *matv);
+void printdot(uint8_t matc, const matrix_t *matv);
 
 #endif

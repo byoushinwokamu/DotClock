@@ -3,12 +3,11 @@
 
 #include "matrix.h"
 
-// typedef enum { LEFT, RIGHT } DIR;
-
-// void movedots(uint8_t matc, matrix *matv, DIR dir, uint8_t amount);
-void moveright(uint8_t matc, matrix *matv);
-void moverightn(uint8_t matc, matrix *matv, uint8_t amount);
-void moveright8(uint8_t matc, matrix *matv);
-void drawchar(matrix *matv, char ch);
+void moveright(uint8_t matc, matrix_t *matv);
+void moverightn(uint8_t matc, matrix_t *matv, uint8_t amount);
+void moveright8(uint8_t matc, matrix_t *matv);
+void moveleft(uint8_t matc, matrix_t *matv);
+void moveleftn(uint8_t matc, matrix_t *matv, uint8_t amount);
+void drawchar(matrix_t *matv, char ch, char dir);
 
 #endif

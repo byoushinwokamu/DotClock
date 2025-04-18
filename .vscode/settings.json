@@ -2,6 +2,7 @@
 	"files.associations": {
 		"*.m": "matlab",
 		"matrix.h": "c",
-		"stdint.h": "c"
+		"stdint.h": "c",
+		"graphic.h": "c"
 	}
 }
