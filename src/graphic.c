@@ -180,7 +180,7 @@ void move(canvas_t *canvas, int layer, dir_t direction) {
   case DOWN:
     for (rcur = r - 1; rcur > 0; rcur--)
       for (ccur = 0; ccur < c; ccur++)
-        copylayer(canvas->cellv + ((rcur - 1) * r + ccur),
+        copylayer(canvas->cellv + ((rcur - 1) * c + ccur),
                   canvas->cellv + (rcur * c + ccur), layer);
     for (ccur = 0; ccur < c; ccur++)
       clearlayer(canvas->cellv + (ccur), layer);
