@@ -9,6 +9,11 @@ canvas_t *newcanvas(int row, int col) {
   return ret;
 }
 
+void deletecanvas(canvas_t *canvas) {
+  free(canvas->cellv);
+  free(canvas);
+}
+
 void printcanvas(canvas_t *can) {
   int rs = can->rsize, cs = can->csize;
   for (int r = 0; r < rs; r++) {

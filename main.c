@@ -8,7 +8,7 @@ matrix_t mar[5];
 int main(int argc, char **argv) {
   canvas_t *canvas = newcanvas(8, 40);
 
-  draw(canvas, 0, C_0_LEGACY, 0, 0, NOALIGN);
+  draw(canvas, 0, 0x1C14141C0000ULL, 0, 0, NOALIGN);
   draw(canvas, 1, C_1_LEGACY, 0, 4, NOALIGN);
   draw(canvas, 2, C_2_LEGACY, 0, 7, NOALIGN);
   draw(canvas, 3, C_3_LEGACY, 0, 13, NOALIGN);
@@ -32,5 +32,6 @@ int main(int argc, char **argv) {
   mar[4] = conversion(canvas, 0, 32);
   printdot(5, mar);
 
+  deletecanvas(canvas);
   return 0;
 }

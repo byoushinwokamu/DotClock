@@ -9,6 +9,7 @@ typedef struct {
 } canvas_t;
 
 canvas_t *newcanvas(int row, int col);
+void deletecanvas(canvas_t *canvas);
 void printcanvas(canvas_t *can);
 
 #endif
